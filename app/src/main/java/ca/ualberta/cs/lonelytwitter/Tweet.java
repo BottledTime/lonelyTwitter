@@ -48,4 +48,24 @@ public abstract class Tweet implements Tweetable {
     public Date getDate() {
         return date;
     }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Tweet tweet = (Tweet) o;
+
+        if (!message.equals(tweet.message)) return false;
+        return date.equals(tweet.date);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = message.hashCode();
+        result = 31 * result + date.hashCode();
+        return result;
+    }
 }
