@@ -35,15 +35,16 @@ import com.google.gson.reflect.TypeToken;
  * <p> You can access this file from Android Device Monitor.</p>
  * <pre> pre-formatted      text</pre>
  * <code>
- *     pseudo-code that is used in this class is as follows:
- *     step 1 <br>
- *     step2 <br>
+ * pseudo-code that is used in this class is as follows:
+ * step 1 <br>
+ * step2 <br>
  * </code>
+ *
  * @author derekshultz
- * @since 1.4
  * @see NormalTweet
  * @see java.io.BufferedReader
  * @see TweetList
+ * @since 1.4
  */
 public class LonelyTwitterActivity extends Activity {
 
@@ -60,11 +61,10 @@ public class LonelyTwitterActivity extends Activity {
 	private ArrayList<Tweet> tweetList = new ArrayList<Tweet>();
 	private ArrayAdapter<Tweet> adapter;
 
-	/*
-	Testing multi-line documentations
-	Testing.
+	/**
+	 * Called when the activity is first created. Shows views. Sets listeners for the save button
+	 * and the clear button
 	 */
-	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -100,9 +100,11 @@ public class LonelyTwitterActivity extends Activity {
 		});
 	}
 
+	/**
+	 * Sets up adapter for the list of tweets
+	 */
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
 		super.onStart();
 		adapter = new ArrayAdapter<Tweet>(this,
 				R.layout.list_item, tweetList);
@@ -110,7 +112,8 @@ public class LonelyTwitterActivity extends Activity {
 	}
 
 	/**
-	 * This method loads the json file and generates the tweets from its contents.
+	 * This method loads the json file (or creates one if it doesn't yet exist) and generates the
+	 * tweets from its contents.
 	 */
 	private void loadFromFile() {
 		//ArrayList<String> tweets = new ArrayList<String>();
@@ -127,7 +130,10 @@ public class LonelyTwitterActivity extends Activity {
 			//throw new RuntimeException();
 		}
 	}
-	
+
+	/**
+	 * This method saves to the json file.
+	 */
 	private void saveInFile() {
 		try {
 
@@ -137,10 +143,8 @@ public class LonelyTwitterActivity extends Activity {
 			gson.toJson(tweetList, writer);
 			writer.flush();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			throw new RuntimeException();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			throw new RuntimeException();
 		}
 	}

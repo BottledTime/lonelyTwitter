@@ -11,11 +11,17 @@ import java.util.List;
  * Created by derekshultz on 2016-09-29.
  */
 public class TweetListTest extends ActivityInstrumentationTestCase2{
+    /**
+     * Instantiates a new Tweet list test.
+     */
     public TweetListTest()
     {
         super(ca.ualberta.cs.lonelytwitter.LonelyTwitterActivity.class);
     }
 
+    /**
+     * Test add tweet.
+     */
     public void testAddTweet() {
         TweetList tweets = new TweetList();
         Tweet tweet = new NormalTweet("adding tweet");
@@ -23,6 +29,9 @@ public class TweetListTest extends ActivityInstrumentationTestCase2{
         assertTrue(tweets.hasTweet(tweet));
     }
 
+    /**
+     * Test add duplicate tweet.
+     */
     public void testAddDuplicateTweet()
     {
         TweetList tweets = new TweetList();
@@ -39,7 +48,10 @@ public class TweetListTest extends ActivityInstrumentationTestCase2{
         assertTrue(false);
     }
 
-    //must start with 'test'
+    /**
+     * Test has tweet.
+     */
+//must start with 'test'
     public void testHasTweet()
     {
         TweetList list = new TweetList();
@@ -48,6 +60,9 @@ public class TweetListTest extends ActivityInstrumentationTestCase2{
         assertTrue(list.hasTweet(tweet));
     }
 
+    /**
+     * Test delete tweet.
+     */
     public void testDelete()
     {
         TweetList list = new TweetList();
@@ -57,6 +72,9 @@ public class TweetListTest extends ActivityInstrumentationTestCase2{
         assertFalse(list.hasTweet(tweet));
     }
 
+    /**
+     * Test get tweet.
+     */
     public void testGetTweet()
     {
         TweetList tweets = new TweetList();
@@ -66,6 +84,9 @@ public class TweetListTest extends ActivityInstrumentationTestCase2{
         assertEquals(returnedTweet.getMessage(), tweet.getMessage());
     }
 
+    /**
+     * Test get tweets.
+     */
     public void testGetTweets()
     {
         TweetList tweets = new TweetList();
@@ -79,6 +100,9 @@ public class TweetListTest extends ActivityInstrumentationTestCase2{
         assertEquals(tweets.getTweets().get(1), another_tweet);
     }
 
+    /**
+     * Test has equal tweet.
+     */
     public void testHasEqualTweet()
     {
         TweetList tweets = new TweetList();
@@ -88,6 +112,9 @@ public class TweetListTest extends ActivityInstrumentationTestCase2{
         assertTrue(tweets.hasTweet(new_tweet));
     }
 
+    /**
+     * Test get count.
+     */
     public void testGetCount()
     {
         TweetList tweets = new TweetList();
