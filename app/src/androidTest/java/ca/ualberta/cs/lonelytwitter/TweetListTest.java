@@ -8,6 +8,7 @@ import java.util.List;
 //import JUnit4 to have @Before to make everything way better
 
 /**
+ * Tests the TweetList class.
  * Created by derekshultz on 2016-09-29.
  */
 public class TweetListTest extends ActivityInstrumentationTestCase2{

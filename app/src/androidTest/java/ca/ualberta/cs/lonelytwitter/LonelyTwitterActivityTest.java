@@ -6,6 +6,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import junit.framework.TestCase;
 
 /**
+ * Tests the LonelyTwitterActivity class
  * Created by wz on 14/09/15.
  */
 public class LonelyTwitterActivityTest extends ActivityInstrumentationTestCase2 {

@@ -3,11 +3,12 @@ package ca.ualberta.cs.lonelytwitter;
 import java.util.Date;
 
 /**
- * Created by watts1 on 9/15/16.
- * This is a model abstract class that represents tweets. It has a message attribute and a date
- * attribute. It allows the caller to set the message or the message and the date upon creation.
+ * This is a model abstract class that represents tweets.
+ * It has a message attribute and a date attribute. It allows the caller to set the message or
+ * the message and the date upon creation.
  * It overrides toString to return its message. The message and date are capable of being reset
  * later. It's equal method checks if the message is equal.
+ * Created by watts1 on 9/15/16.
  */
 public abstract class Tweet implements Tweetable {
     private String message;

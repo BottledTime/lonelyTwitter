@@ -1,9 +1,9 @@
 package ca.ualberta.cs.lonelytwitter;
 
 /**
+ * This class is a model class that represents tweets that are important.
+ * It's just like the Tweet abstract class, but its isImportant method returns true.
  * Created by watts1 on 9/15/16.
- * This class is a model class that represents tweets that are important. It's just like the
- * Tweet abstract class, but its isImportant method returns true.
  */
 public class ImportantTweet extends Tweet{
 

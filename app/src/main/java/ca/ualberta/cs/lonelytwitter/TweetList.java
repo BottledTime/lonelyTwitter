@@ -7,9 +7,9 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
+ * This is a model controller class that represents the list of all the tweets that exist.
+ * It allows tweets to be added or removed.
  * Created by derekshultz on 2016-09-29.
- * This is a model controller class that represents the list of all the tweets that exist. It allows
- * tweets to be added or removed.
  */
 public class TweetList
 {

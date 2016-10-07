@@ -4,9 +4,9 @@ package ca.ualberta.cs.lonelytwitter;
 import java.util.Date;
 
 /**
+ * This is an interface to enforce that something is able to be tweeted.
+ * getMessage needs to return a String and getDate needs to return a date.
  * Created by watts1 on 9/15/16.
- * This is an interface to enforce that something is able to be tweeted. getMessage needs to return
- * a String and getDate needs to return a date.
  */
 public interface Tweetable {
     /**
