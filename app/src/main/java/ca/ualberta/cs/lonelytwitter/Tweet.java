@@ -1,5 +1,6 @@
 package ca.ualberta.cs.lonelytwitter;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Date;
  * later. It's equal method checks if the message is equal.
  * Created by watts1 on 9/15/16.
  */
-public abstract class Tweet implements Tweetable {
+public abstract class Tweet implements Tweetable, Serializable {
     private String message;
     private Date date;
 
